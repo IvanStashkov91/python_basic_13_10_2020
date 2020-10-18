@@ -47,4 +47,11 @@ not
 and
 or
 '''
-
+#введение только чисел цифрами
+while True:
+    user_a = input('введите целое число результата в первый день\n')
+    if user_a.isdigit():
+        user_a = int(user_a)
+        break
+    else:
+        print('ошибка ввода, это не число')
