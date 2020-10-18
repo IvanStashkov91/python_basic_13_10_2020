@@ -35,4 +35,3 @@ elif month_number == 6 or month_number == 7 or month_number == 8:
     print(f'{month_number}-й месяц - {seasons_list[2]}')
 else:
     print(f'{month_number}-й месяц - {seasons_list[3]}')
-
