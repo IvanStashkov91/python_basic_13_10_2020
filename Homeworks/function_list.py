@@ -16,7 +16,7 @@ def my_range(start, stop, step=1):
     except ValueError:
         print('use only number')
 
-# my_enumerate ################################################################################################
+# my_enumerate ###############################################################################################
 def my_enumerate(iter_object, start = 0):
     """ Enumerate function implementation
     :param iter_object:
