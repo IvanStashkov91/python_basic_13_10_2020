@@ -6,9 +6,10 @@
 Результат: [12, 44, 4, 10, 78, 123].
 '''
 
-list = [300, 333, 333, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
+list = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
+
 # вариант 1
-result_list = [el for el in list[1:] if el > list[list.index(el)-1]]
+result_list = [el for itm, el in enumerate(list[1:], 1) if el > list[itm - 1]]
 
 print(result_list)
 
@@ -19,5 +20,6 @@ for i in range(1, len(list)):
         new_list.append(list[i])
 
 print(new_list)
+
 
 
