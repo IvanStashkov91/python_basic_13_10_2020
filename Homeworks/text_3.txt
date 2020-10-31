@@ -1,0 +1,5 @@
+Petrov 15000
+Ivanov 30000
+Smirno 22000
+Fedorov 19000
+Kirrilov 18000
