@@ -18,50 +18,60 @@ class Car:
         self.is_possible = is_police
 
     def go(self):
-        print(f'{self.color} {self.name} drove')
+        return f'{self.color} {self.name} drove'
 
     def stop(self):
-        print(f'{self.color} {self.name} stopped')
+        return f'{self.color} {self.name} stopped'
 
     def turn(self, direction):
         self.direction = direction
-        print(f'{self.color} {self.name} turned {self.direction}')
+        return f'{self.color} {self.name} turned {self.direction}'
 
-    def show_speed(self, speed):
-        self.speed = speed
-        print(f'{self.color} {self.name} speed is {self.speed}')
+    def show_speed(self):
+        return f'{self.color} {self.name} speed is {self.speed}'
 
-class TownCar:
+
+class TownCar(Car):
     def __init__(self, speed, color, name, is_police=False):
         super().__init__(speed, color, name, is_police)
 
-    def show_speed(self, speed):
-        if speed > 60:
-            print(f'Over speed!!! Your speed is {speed}')
+    def show_speed(self):
+        if self.speed > 60:
+            return f'Over speed!!! Your speed is {self.speed}.'
         else:
-            print(f'The car speed is {speed}')
+            return f'The car speed is {self.speed}'
 
-class SportCar:
+
+class SportCar(Car):
     def __init__(self, speed, color, name, is_police=False):
         super().__init__(speed, color, name, is_police)
 
-class WorkCar:
+
+class WorkCar(Car):
     def __init__(self, speed, color, name, is_police=False):
         super().__init__(speed, color, name, is_police)
 
-    def show_speed(self, speed):
-        if speed > 60:
-            print(f'Over speed!!! Your speed is {speed}')
+    def show_speed(self):
+        if self.speed > 40:
+            return f'Over speed!!! Your speed is {self.speed}'
         else:
-            print(f'The car speed is {speed}')
+            return f'The car speed is {self.speed}'
 
-class PoliceCar:
+
+class PoliceCar(Car):
     def __init__(self, speed, color, name, is_police=True):
         super().__init__(speed, color, name, is_police)
 
 
 
-
-
-
-
+if __name__ == '__main__':
+    tesla = TownCar(70, 'white', 'Tesla')
+    iveco = WorkCar(55, 'black', 'Iveco')
+    bugatti = SportCar(150, 'black', 'Bugatti')
+    toyota = PoliceCar(110, 'white-blue', 'Toyota')
+    print(tesla.go())
+    print(iveco.go())
+    print(bugatti.go())
+    print(toyota.go())
+    print(toyota.turn('left'))
+    print(tesla.show_speed())
