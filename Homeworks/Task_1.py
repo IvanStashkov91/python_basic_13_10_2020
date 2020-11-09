@@ -32,9 +32,3 @@ class Data:
 if __name__ == '__main__':
     print(Data.extraction_d_m_y('02-98-90'))
     print(Data.validation_d_m_y('1-1-1'))
-
-
-
-
-
-
