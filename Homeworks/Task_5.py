@@ -12,7 +12,7 @@ class ComplexNumber:
         self.imaginary_part = imaginary_part
 
     def __add__(self, other):
-        return f'{complex(self.real_part, self.imaginary_part) + complex(other.real_part, other.imaginary_part)}'
+        return complex(self.real_part, self.imaginary_part) + complex(other.real_part, other.imaginary_part)
 
     def __mul__(self, other):
         return complex(self.real_part, self.imaginary_part) * complex(other.real_part, other.imaginary_part)
